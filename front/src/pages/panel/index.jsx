@@ -1,7 +1,7 @@
 const Panel = () => {
     return(
         <section>
-            <h1>Panel page</h1>
+            <h1>Panel</h1>
             <p>(Unprotected route)</p>
         </section>
     )
