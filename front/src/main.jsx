@@ -1,19 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import Login from './pages/login'
-import Panel from './pages/panel'
-import { Switch, Route, Redirect } from 'wouter';
-import Register from './pages/register';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Login from "./pages/login";
+import Panel from "./pages/panel";
+import { Switch, Route, Redirect } from "wouter";
+import Register from "./pages/register";
+import Provider from "./context/Provider"
 
 const Main = () => {
    return(
-    <Switch>
-      <Route path='/login' component={Login} />
-      <Route path='/panel' component={Panel} />
-      <Route path='/' component={Register} />
-      <Redirect to='/login' />
-    </Switch>
+    <Provider>
+      <Switch>
+       <Route path='/login' component={Login} />
+       <Route path='/panel' component={Panel} />
+       <Route path='/' component={Register} />
+       <Redirect to='/login' />
+      </Switch>
+    </Provider>
    )
 }
 
